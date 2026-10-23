@@ -18,8 +18,6 @@ MEMBER_PERCENTAGE = 60
 TOTAL_MEMBERS = 150
 FILENAME = "bookings_raw_data.csv"
 
-random.seed(42)
-
 # Club Offerings & Helper Function
 SPORTS = {}
 
@@ -70,6 +68,8 @@ BOOKINGFIELDNAMES = [
     "Discount",
     "MemberNo",
 ]
+
+random.seed(42)
 
 # Generate records directly and write to CSV
 with open(FILENAME, "w", newline="", encoding="utf-8") as file:
