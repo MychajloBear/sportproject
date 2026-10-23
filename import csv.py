@@ -45,7 +45,7 @@ SPORT_NAMES = list(SPORTS.keys())
 MEMBER_NUMBERS = [f"M{1000 + n}" for n in range(1, TOTAL_MEMBERS + 1)]
 START_DATE = date(2026, 1, 1)
 
-FIELDNAMES = [
+BOOKINGFIELDNAMES = [
     "Date",
     "BookingID",
     "Sport",
@@ -58,7 +58,7 @@ FIELDNAMES = [
 
 # Generate records directly and write to CSV
 with open(FILENAME, "w", newline="", encoding="utf-8") as file:
-    writer = csv.DictWriter(file, fieldnames=FIELDNAMES, delimiter=";")
+    writer = csv.DictWriter(file, fieldnames=BOOKINGFIELDNAMES, delimiter=";")
     writer.writeheader()
 
     for number in range(1, TOTAL_BOOKINGS + 1):
