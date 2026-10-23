@@ -1,3 +1,10 @@
+"""
+Raw Data Generator: Sports Course Bookings (one participant per booking)
+Club: Eintracht Fliegenhausen e.V. (simulated data)
+
+Uses standard library only (csv, random, datetime).
+"""
+
 import csv
 import os
 import random
@@ -17,6 +24,14 @@ random.seed(42)
 SPORTS = {}
 
 def add_sport(name, unit_price, member_discount):
+    """
+    Adds a sport discipline with its pricing and member discount rules to the dictionary.
+
+    Parameters:
+    - name (str): The name of the sport discipline.
+    - unit_price (int): Regular price of the course in Euros/Dollars.
+    - member_discount (int): Fixed discount in Euros/Dollars applied exclusively to members.
+    """
     SPORTS[name] = {"unit_price": unit_price, "member_discount": member_discount}
 
 add_sport("Badminton", 90, 40)
